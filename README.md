@@ -34,14 +34,16 @@ A versão web é um arquivo **HTML único** (`cinelog.html`) que contém todo o 
 O sistema já vem com dois usuários pré-cadastrados para facilitar os testes. Utilize as credenciais abaixo:
 
 #### Usuário Administrador
-|Campo	|Valor|
-|E-mail	|admin@cinelog.com|
-|Senha	|Admin@123|
-|Nome	|Admin Demo|
-|Tipo	|Administrador (acesso total)|
+| Campo	| Valor |
+|--------|------|
+| E-mail	| admin@cinelog.com |
+| Senha	| Admin@123 |
+| Nome	| Admin Demo |
+| Tipo	| Administrador (acesso total) |
 
 #### Usuário Comum
 |Campo	|Valor|
+|--------|------|
 |E-mail	|lm@cinelog.com|
 |Senha|	123456|
 |Nome	|Lucas|
@@ -69,6 +71,7 @@ dotnet run
 ## Tecnologias Utilizadas
 
 |Tecnologia	|Finalidade|
+|--------|------|
 |**C# (.NET 8)**|	Linguagem principal do sistema|
 |**System.Text.Json**	|Serialização/desserialização JSON|
 |**HTML5 / CSS3 / JavaScript**|	Interface web complementar|
@@ -203,6 +206,7 @@ catch (Exception ex)                   { /* erro inesperado */ }
 
 ## Grupo Desenvolvedor
 |Nome|	Responsabilidade|
+|--------|------|
 |Lucas Marinho Blon Rocha	|Apresentação do Sistema, Repositório GitHub|
 |Fábio Sérgio Carvalho Mendonça	|Apresentação do Sistema, Repositório GitHub|
 |Guilherme Cândido Vidulino	|Modelagem do Sistema|
