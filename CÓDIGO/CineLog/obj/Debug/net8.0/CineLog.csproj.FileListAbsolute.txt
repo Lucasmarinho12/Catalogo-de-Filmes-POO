@@ -1,0 +1,28 @@
+C:\Users\Lenovo\Downloads\CineLog\CineLog\bin\Debug\net8.0\CineLog.exe
+C:\Users\Lenovo\Downloads\CineLog\CineLog\bin\Debug\net8.0\CineLog.deps.json
+C:\Users\Lenovo\Downloads\CineLog\CineLog\bin\Debug\net8.0\CineLog.runtimeconfig.json
+C:\Users\Lenovo\Downloads\CineLog\CineLog\bin\Debug\net8.0\CineLog.dll
+C:\Users\Lenovo\Downloads\CineLog\CineLog\bin\Debug\net8.0\CineLog.pdb
+C:\Users\Lenovo\Downloads\CineLog\CineLog\obj\Debug\net8.0\CineLog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\CineLog\CineLog\obj\Debug\net8.0\CineLog.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\CineLog\CineLog\obj\Debug\net8.0\CineLog.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\CineLog\CineLog\obj\Debug\net8.0\CineLog.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\CineLog\CineLog\obj\Debug\net8.0\CineLog.dll
+C:\Users\Lenovo\Downloads\CineLog\CineLog\obj\Debug\net8.0\refint\CineLog.dll
+C:\Users\Lenovo\Downloads\CineLog\CineLog\obj\Debug\net8.0\CineLog.pdb
+C:\Users\Lenovo\Downloads\CineLog\CineLog\obj\Debug\net8.0\CineLog.genruntimeconfig.cache
+C:\Users\Lenovo\Downloads\CineLog\CineLog\obj\Debug\net8.0\ref\CineLog.dll
+C:\Users\Lenovo\Downloads\CineLog Lucas\CineLog\bin\Debug\net8.0\CineLog.exe
+C:\Users\Lenovo\Downloads\CineLog Lucas\CineLog\bin\Debug\net8.0\CineLog.deps.json
+C:\Users\Lenovo\Downloads\CineLog Lucas\CineLog\bin\Debug\net8.0\CineLog.runtimeconfig.json
+C:\Users\Lenovo\Downloads\CineLog Lucas\CineLog\bin\Debug\net8.0\CineLog.dll
+C:\Users\Lenovo\Downloads\CineLog Lucas\CineLog\bin\Debug\net8.0\CineLog.pdb
+C:\Users\Lenovo\Downloads\CineLog Lucas\CineLog\obj\Debug\net8.0\CineLog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Downloads\CineLog Lucas\CineLog\obj\Debug\net8.0\CineLog.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Downloads\CineLog Lucas\CineLog\obj\Debug\net8.0\CineLog.AssemblyInfo.cs
+C:\Users\Lenovo\Downloads\CineLog Lucas\CineLog\obj\Debug\net8.0\CineLog.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Downloads\CineLog Lucas\CineLog\obj\Debug\net8.0\CineLog.dll
+C:\Users\Lenovo\Downloads\CineLog Lucas\CineLog\obj\Debug\net8.0\refint\CineLog.dll
+C:\Users\Lenovo\Downloads\CineLog Lucas\CineLog\obj\Debug\net8.0\CineLog.pdb
+C:\Users\Lenovo\Downloads\CineLog Lucas\CineLog\obj\Debug\net8.0\CineLog.genruntimeconfig.cache
+C:\Users\Lenovo\Downloads\CineLog Lucas\CineLog\obj\Debug\net8.0\ref\CineLog.dll

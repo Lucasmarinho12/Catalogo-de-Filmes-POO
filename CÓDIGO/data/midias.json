@@ -1,0 +1,199 @@
+[
+  {
+    "Tipo": "Filme",
+    "Id": 1,
+    "Titulo": "O Poderoso Chef\u00E3o",
+    "Ano": 1972,
+    "Genero": "Drama/Crime",
+    "Sinopse": "A hist\u00F3ria da fam\u00EDlia Corleone e seu imp\u00E9rio criminoso.",
+    "DuracaoMinutos": 175,
+    "Diretor": "Francis Ford Coppola",
+    "NumeroTemporadas": null,
+    "NumeroEpisodios": null,
+    "EmAndamento": null,
+    "Criador": null,
+    "Avaliacoes": [
+      {
+        "Id": 1,
+        "UsuarioId": 1,
+        "MidiaId": 1,
+        "Nota": 9.8,
+        "Comentario": "Obra-prima absoluta do cinema.",
+        "Data": "2026-06-02T21:38:24.1735497-03:00"
+      }
+    ]
+  },
+  {
+    "Tipo": "Filme",
+    "Id": 2,
+    "Titulo": "Interestelar",
+    "Ano": 2014,
+    "Genero": "Fic\u00E7\u00E3o Cient\u00EDfica",
+    "Sinopse": "Um grupo de astronautas viaja al\u00E9m da gal\u00E1xia em busca de um novo lar.",
+    "DuracaoMinutos": 169,
+    "Diretor": "Christopher Nolan",
+    "NumeroTemporadas": null,
+    "NumeroEpisodios": null,
+    "EmAndamento": null,
+    "Criador": null,
+    "Avaliacoes": [
+      {
+        "Id": 2,
+        "UsuarioId": 1,
+        "MidiaId": 2,
+        "Nota": 9.5,
+        "Comentario": "Nolan no seu melhor.",
+        "Data": "2026-06-02T21:38:24.17466-03:00"
+      },
+      {
+        "Id": 6,
+        "UsuarioId": 2,
+        "MidiaId": 2,
+        "Nota": 9,
+        "Comentario": "",
+        "Data": "2026-06-02T21:38:24.1746664-03:00"
+      }
+    ]
+  },
+  {
+    "Tipo": "Filme",
+    "Id": 3,
+    "Titulo": "Parasita",
+    "Ano": 2019,
+    "Genero": "Thriller/Drama",
+    "Sinopse": "Duas fam\u00EDlias de classes sociais opostas se enredam em situa\u00E7\u00F5es inesperadas.",
+    "DuracaoMinutos": 132,
+    "Diretor": "Bong Joon-ho",
+    "NumeroTemporadas": null,
+    "NumeroEpisodios": null,
+    "EmAndamento": null,
+    "Criador": null,
+    "Avaliacoes": [
+      {
+        "Id": 3,
+        "UsuarioId": 1,
+        "MidiaId": 3,
+        "Nota": 9.2,
+        "Comentario": "Merece cada pr\u00EAmio que ganhou.",
+        "Data": "2026-06-02T21:38:24.1747488-03:00"
+      }
+    ]
+  },
+  {
+    "Tipo": "Filme",
+    "Id": 4,
+    "Titulo": "Cidade de Deus",
+    "Ano": 2002,
+    "Genero": "Drama/Crime",
+    "Sinopse": "A hist\u00F3ria de jovens no Rio de Janeiro marcados pela viol\u00EAncia.",
+    "DuracaoMinutos": 130,
+    "Diretor": "Fernando Meirelles",
+    "NumeroTemporadas": null,
+    "NumeroEpisodios": null,
+    "EmAndamento": null,
+    "Criador": null,
+    "Avaliacoes": []
+  },
+  {
+    "Tipo": "Filme",
+    "Id": 5,
+    "Titulo": "A Origem",
+    "Ano": 2010,
+    "Genero": "Fic\u00E7\u00E3o Cient\u00EDfica",
+    "Sinopse": "Um ladr\u00E3o especializado em roubar segredos do subconsciente.",
+    "DuracaoMinutos": 148,
+    "Diretor": "Christopher Nolan",
+    "NumeroTemporadas": null,
+    "NumeroEpisodios": null,
+    "EmAndamento": null,
+    "Criador": null,
+    "Avaliacoes": []
+  },
+  {
+    "Tipo": "S\u00E9rie",
+    "Id": 6,
+    "Titulo": "Breaking Bad",
+    "Ano": 2008,
+    "Genero": "Drama/Thriller",
+    "Sinopse": "Um professor de qu\u00EDmica transforma-se em produtor de metanfetamina.",
+    "DuracaoMinutos": null,
+    "Diretor": null,
+    "NumeroTemporadas": 5,
+    "NumeroEpisodios": 62,
+    "EmAndamento": false,
+    "Criador": "Vince Gilligan",
+    "Avaliacoes": [
+      {
+        "Id": 4,
+        "UsuarioId": 1,
+        "MidiaId": 6,
+        "Nota": 10,
+        "Comentario": "A melhor s\u00E9rie j\u00E1 feita.",
+        "Data": "2026-06-02T21:38:24.1752498-03:00"
+      }
+    ]
+  },
+  {
+    "Tipo": "S\u00E9rie",
+    "Id": 7,
+    "Titulo": "Dark",
+    "Ano": 2017,
+    "Genero": "Fic\u00E7\u00E3o Cient\u00EDfica/Mist\u00E9rio",
+    "Sinopse": "Quatro fam\u00EDlias interligadas por viagens no tempo em uma cidade alem\u00E3.",
+    "DuracaoMinutos": null,
+    "Diretor": null,
+    "NumeroTemporadas": 3,
+    "NumeroEpisodios": 26,
+    "EmAndamento": false,
+    "Criador": "Baran bo Odar",
+    "Avaliacoes": [
+      {
+        "Id": 5,
+        "UsuarioId": 1,
+        "MidiaId": 7,
+        "Nota": 9.7,
+        "Comentario": "Roteiro impec\u00E1vel.",
+        "Data": "2026-06-02T21:38:24.1752521-03:00"
+      }
+    ]
+  },
+  {
+    "Tipo": "S\u00E9rie",
+    "Id": 8,
+    "Titulo": "Chernobyl",
+    "Ano": 2019,
+    "Genero": "Drama Hist\u00F3rico/Miniss\u00E9rie",
+    "Sinopse": "A hist\u00F3ria da cat\u00E1strofe nuclear de 1986 e seus her\u00F3is desconhecidos.",
+    "DuracaoMinutos": null,
+    "Diretor": null,
+    "NumeroTemporadas": 1,
+    "NumeroEpisodios": 5,
+    "EmAndamento": false,
+    "Criador": "Craig Mazin",
+    "Avaliacoes": [
+      {
+        "Id": 7,
+        "UsuarioId": 2,
+        "MidiaId": 8,
+        "Nota": 9,
+        "Comentario": "",
+        "Data": "2026-06-02T21:39:57.7056633-03:00"
+      }
+    ]
+  },
+  {
+    "Tipo": "S\u00E9rie",
+    "Id": 9,
+    "Titulo": "The Bear",
+    "Ano": 2022,
+    "Genero": "Drama/Com\u00E9dia",
+    "Sinopse": "Um chef talentoso assume o restaurante de fam\u00EDlia ap\u00F3s uma trag\u00E9dia.",
+    "DuracaoMinutos": null,
+    "Diretor": null,
+    "NumeroTemporadas": 3,
+    "NumeroEpisodios": 28,
+    "EmAndamento": true,
+    "Criador": "Christopher Storer",
+    "Avaliacoes": []
+  }
+]

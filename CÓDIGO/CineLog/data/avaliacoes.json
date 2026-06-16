@@ -1,0 +1,58 @@
+[
+  {
+    "Id": 1,
+    "UsuarioId": 1,
+    "MidiaId": 1,
+    "Nota": 9.8,
+    "Comentario": "Obra-prima absoluta do cinema.",
+    "Data": "2026-06-03T19:43:26.5805316-03:00"
+  },
+  {
+    "Id": 2,
+    "UsuarioId": 1,
+    "MidiaId": 2,
+    "Nota": 9.5,
+    "Comentario": "Nolan no seu melhor.",
+    "Data": "2026-06-03T19:43:26.5805335-03:00"
+  },
+  {
+    "Id": 3,
+    "UsuarioId": 1,
+    "MidiaId": 3,
+    "Nota": 9.2,
+    "Comentario": "Merece cada pr\u00EAmio que ganhou.",
+    "Data": "2026-06-03T19:43:26.5805338-03:00"
+  },
+  {
+    "Id": 4,
+    "UsuarioId": 1,
+    "MidiaId": 6,
+    "Nota": 10,
+    "Comentario": "A melhor s\u00E9rie j\u00E1 feita.",
+    "Data": "2026-06-03T19:43:26.580534-03:00"
+  },
+  {
+    "Id": 5,
+    "UsuarioId": 1,
+    "MidiaId": 7,
+    "Nota": 9.7,
+    "Comentario": "Roteiro impec\u00E1vel.",
+    "Data": "2026-06-03T19:43:26.5805342-03:00"
+  },
+  {
+    "Id": 6,
+    "UsuarioId": 3,
+    "MidiaId": 5,
+    "Nota": 9.7,
+    "Comentario": "",
+    "Data": "2026-06-03T19:45:10.8360507-03:00"
+  },
+  {
+    "Id": 7,
+    "UsuarioId": 3,
+    "MidiaId": 2,
+    "Nota": 9.9,
+    "Comentario": "",
+    "Data": "2026-06-03T19:46:25.0020289-03:00"
+  }
+]

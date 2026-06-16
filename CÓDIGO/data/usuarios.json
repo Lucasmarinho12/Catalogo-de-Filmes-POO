@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 1,
+    "Nome": "Admin Demo",
+    "Email": "admin@cinelog.com",
+    "SenhaHash": "QWRtaW5AMTIzY2luZWxvZ19zYWx0",
+    "QueroAssistir": [],
+    "Assistidos": [],
+    "Favoritos": []
+  },
+  {
+    "Id": 2,
+    "Nome": "Lucas",
+    "Email": "lm@cinelog.com",
+    "SenhaHash": "MTIzNDU2Y2luZWxvZ19zYWx0",
+    "QueroAssistir": [
+      4
+    ],
+    "Assistidos": [],
+    "Favoritos": []
+  }
+]
