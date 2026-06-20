@@ -111,10 +111,10 @@ CineLog/
 └─────────────────────┘     JSON                    └───────────┬──────────┘
                                                                 │
                                                       CatalogoService (regras)
-                                                                  │
+                                                                │
                                                       Repositórios (persistência)
-                                                                  │
-                                                                  ▼
+                                                                │
+                                                                ▼
                                                       data/*.json (disco)
 ```
 ---
