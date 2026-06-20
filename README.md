@@ -1,6 +1,6 @@
 # 🎬 CineLog — Catálogo de Filmes e Séries
 
-Sistema orientado a objetos em C# para organização pessoal de mídias, com avaliações, listas personalizadas e recomendações.
+Sistema orientado a objetos em C# para organização pessoal de mídias, com avaliações, listas personalizadas, recomendações e API REST.
 
 ---
 
@@ -19,16 +19,19 @@ dotnet run
 ### Execução da Versão Web
 A versão web é um arquivo **HTML único** (`cinelog.html`) que contém todo o CSS e JavaScript embutidos. Ela utiliza `localStorage` para persistência, compartilhando o mesmo modelo de dados da versão C#.
 
-#### Método 1: Abrir diretamente no navegador
-1. Localize o arquivo cinelog.html na raiz do projeto
-2. Dê um duplo clique no arquivo (abrirá no navegador padrão)
-3. Ou clique com o botão direito → "Abrir com" → escolha seu navegador
+Acesse **http://localhost:5000** — o próprio ASP.NET Core serve o `index.html` (pasta `wwwroot`) e a API ao mesmo tempo, então não há problema de CORS mesmo se você preferir abrir por outra porta (CORS já está liberado no `Program.cs`).
 
-#### Método 2: Via Live Server (VS Code)
-1. Instale a extensão Live Server no VS Code
-2. Abra o arquivo cinelog.html
-3. Clique em "Go Live" no canto inferior direito
-4. O navegador abrirá automaticamente, executando o front-end da aplicação.
+Login de demonstração: `demo@cinelog.com` / `Demo@123`
+
+### Conferir a API isoladamente
+```
+GET  http://localhost:5000/api/midias
+GET  http://localhost:5000/api/midias/top
+GET  http://localhost:5000/api/midias/estatisticas
+POST http://localhost:5000/api/auth/login        { "email": "...", "senha": "..." }
+```
+
+---
 
 ### 🧪 Credenciais para Teste
 O sistema já vem com dois usuários pré-cadastrados para facilitar os testes. Utilize as credenciais abaixo:
@@ -44,9 +47,9 @@ O sistema já vem com dois usuários pré-cadastrados para facilitar os testes. 
 #### Usuário Comum
 |Campo	|Valor|
 |--------|------|
-|E-mail	|lm@cinelog.com|
-|Senha|	123456|
-|Nome	|Lucas|
+|E-mail	|demo@cinelog.com|
+|Senha|	Demo@123|
+|Nome	|Usuário Demo|
 |Tipo	|Usuário padrão|
 
 #### Como utilizar
@@ -61,7 +64,7 @@ dotnet run
 
 ##### Versão Web (HTML):
 
-1. Abra o arquivo `cinelog.html` no navegador
+1. Acesse [http://localhost:5000](http://localhost:5000)
 2. Clique em **"Entrar"**
 3. Preencha e-mail e senha
 4. Clique em **"Entrar"**
@@ -75,7 +78,8 @@ dotnet run
 |**C# (.NET 8)**|	Linguagem principal do sistema|
 |**System.Text.Json**	|Serialização/desserialização JSON|
 |**HTML5 / CSS3 / JavaScript**|	Interface web complementar|
-|**LocalStorage**|Persistência na versão web|
+| **ASP.NET Core** | API REST e servidor web |
+| **fetch() / AJAX** | Comunicação frontend ↔ backend |
 |**Git**	|Controle de versão|
 
 ---
@@ -84,33 +88,34 @@ dotnet run
 
 ```
 CineLog/
-├── Models/
-│   ├── Midia.cs          ← Classe base abstrata (ABSTRAÇÃO + ENCAPSULAMENTO)
-│   ├── Filme.cs          ← Herda de Midia (HERANÇA + POLIMORFISMO)
-│   ├── Serie.cs          ← Herda de Midia (HERANÇA + POLIMORFISMO)
-│   └── Entidades.cs      ← Usuario, Avaliação, ListaPersonalizada, TipoLista
-├── Exceptions/
-│   └── Excecoes.cs       ← Hierarquia de exceções do domínio
-├── Interfaces/
-│   └── IRepositorios.cs  ← Contratos (Repository Pattern)
-├── Repositories/
-│   └── Repositorios.cs   ← Persistência em JSON
-├── Services/
-│   └── CatalogoService.cs ← Lógica de negócio (Service Layer Pattern)
-├── UI/
-│   └── ConsoleUI.cs      ← Interface de console (Facade Pattern)
-└── Program.cs            ← Entry point + Seed de dados
+├── Models/Models.cs          ← Midia (abstrata), Filme, Serie, Usuario, Avaliacao
+├── Exceptions/Excecoes.cs    ← Hierarquia de exceções do domínio
+├── Interfaces/IRepositorios.cs
+├── Repositories/Repositorios.cs   ← Persistência em JSON (escrita atômica + lock)
+├── Services/CatalogoService.cs    ← Regras de negócio (única fonte da verdade)
+├── DTOs/DTOs.cs               ← Contratos de entrada/saída da API
+├── Controllers/
+│   ├── AuthController.cs      ← /api/auth/login, /api/auth/registrar
+│   └── MidiasController.cs    ← /api/midias/*, /api/usuarios/{id}/listas/*
+├── wwwroot/index.html         ← Frontend completo (servido pela própria API)
+├── Program.cs                  ← Configuração ASP.NET Core + seed de dados
+└── data/                       ← Gerado em runtime: midias.json, usuarios.json, avaliacoes.json
 ```
 
 ## Fluxo de Dados
 
 ```
-Usuário → ConsoleUI → CatalogoService → Repositórios → Arquivos JSON
-                          ↓
-                     Regras de Negócio
-                     Validações
-                     Cálculo de médias
-                     Recomendações
+┌─────────────────────┐     HTTP/REST (fetch)       ┌──────────────────────┐
+│   Navegador (HTML)  │ ─────────────────────────►  │   ASP.NET Core API   │
+│  wwwroot/index.html │ ◄─────────────────────────  │   Controllers        │
+└─────────────────────┘     JSON                    └───────────┬──────────┘
+                                                                │
+                                                      CatalogoService (regras)
+                                                                  │
+                                                      Repositórios (persistência)
+                                                                  │
+                                                                  ▼
+                                                      data/*.json (disco)
 ```
 ---
 
@@ -147,7 +152,7 @@ Usuário → ConsoleUI → CatalogoService → Repositórios → Arquivos JSON
 | **Facade** | `ConsoleUI.cs` | Simplifica a interação com o sistema complexo via console |
 | **Dependency Injection** | `Program.cs` | Repositórios injetados no Service via construtor |
 | **Value Object** | `Avaliacao`, `ListaPersonalizada` | Objetos imutáveis definidos pelos seus atributos |
-
+| **DTO (Data Transfer Object)** | DTOs/DTOs.cs | Isola o modelo de domínio do contrato JSON exposto pela API, evitando vazar detalhes internos (como hash de senha) |
 ---
 
 ## ✅ Regras de Negócio Implementadas
@@ -167,10 +172,9 @@ Os dados são salvos automaticamente em arquivos JSON na pasta `data/`:
 - `data/midias.json` — filmes e séries com suas avaliações embutidas
 - `data/usuarios.json` — usuários com listas personalizadas
 - `data/avaliacoes.json` — histórico de avaliações
-A versão web utiliza localStorage com a chave cinelog_v1.
+A versão web utiliza a API REST para todas as operações. O backend persiste os dados em arquivos JSON na pasta `data/` com escrita atômica (`File.Move`). A versão console e a versão web compartilham **o mesmo banco de dados** no servidor.
 
 ---
-
 
 ## 🔮 Evoluções Previstas
 
@@ -180,9 +184,15 @@ A versão web utiliza localStorage com a chave cinelog_v1.
 - A camada `Service` não precisará de mudanças (princípio de separação de responsabilidades)
 
 ### Fase 3 — Banco de Dados
-- Substituir `*RepositorioJson` por `*RepositorioSqlite` ou `*RepositorioSqlServer`
-- Usar **Entity Framework Core** com migrations
-- As interfaces `IRepositorios.cs` garantem troca sem impacto no `CatalogoService`
+A troca de JSON para SQL é restrita à camada `Repositories/`:
+```csharp
+// Troca no Program.cs:
+builder.Services.AddSingleton<IMidiaRepositorio>(_ => new MidiaRepositorioJson(dataPath));
+// por:
+builder.Services.AddDbContext<CineLogContext>(...);
+builder.Services.AddScoped<IMidiaRepositorio, MidiaRepositorioEfCore>();
+```
+Nada em `CatalogoService`, Controllers ou no `index.html` precisa mudar.
 
 ### Fase 4 — Extensões
 - Integração com [TMDB API](https://www.themoviedb.org/documentation/api) para buscar metadados
